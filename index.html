@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="dashnavigation">
                 <ul class="navbar-nav d-lg-none">
                     <li aria-hidden="true" class="nav-item">
-                        <a href="#" class="nav-link active" id="dashboard" aria-current="page"><i aria-hidden="true" class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                        <a href="#" class="nav-link active" id="dashboard-nav" aria-current="page"><i aria-hidden="true" class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                     </li>
                     <li aria-hidden="true" class="nav-item">
                         <div class="dropend">
@@ -32,9 +32,9 @@
                               <i aria-hidden="true" class="fas fa-boxes me-2"></i>  Product
                             </a>
                             <div class="dropdown-menu w-25" aria-labelledby="product-nav">
-                                <a href="#add-product-pane" class="dropdown-item"><i aria-hidden="true" class="fas fa-plus me-2"></i>Add Product</a>
+                                <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-plus me-2"></i>Add Product</a>
                                 <div class="dropdown-divider bg-light"></div>
-                                <a href="#update-product-pane" class="dropdown-item"><i aria-hidden="true" class="fas fa-edit me-2"></i>Update Product</a>
+                                <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-edit me-2"></i>Update Product</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-minus me-2"></i>Remove Product</a>
                             </div>
@@ -60,10 +60,10 @@
                     </li>
                     <li aria-hidden="true" class="nav-item">
                         <div class="dropend">
-                            <a href="#" class="w-25 dropdown-toggle nav-link" id="contract-nav" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="w-25 dropdown-toggle nav-link" id="purchase-nav" data-bs-toggle="dropdown" aria-expanded="false">
                               <i aria-hidden="true" class="fas fa-shopping-cart me-2"></i>  Purchase
                             </a>
-                            <div class="dropdown-menu w-25" aria-labelledby="contract-nav">
+                            <div class="dropdown-menu w-25" aria-labelledby="purchase-nav">
                                 <a href="" class="dropdown-item"><i aria-hidden="true" class="fas fa-shopping-cart me-2"></i>Buy</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a href="" class="dropdown-item"><i aria-hidden="true" class="fas fa-file-invoice me-2"></i>Invoice</a>
@@ -72,10 +72,10 @@
                     </li>
                     <li aria-hidden="true" class="nav-item">
                         <div class="dropend">
-                            <a href="#" class="w-25 dropdown-toggle nav-link" id="contract-nav" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="w-25 dropdown-toggle nav-link" id="user-nav" data-bs-toggle="dropdown" aria-expanded="false">
                               <i aria-hidden="true" class="fas fa-users me-2"></i>  Users
                             </a>
-                            <div class="dropdown-menu w-25" aria-labelledby="contract-nav">
+                            <div class="dropdown-menu w-25" aria-labelledby="user-nav">
                                 <a href="" class="dropdown-item"><i aria-hidden="true" class="fas fa-plus me-2"></i>Add User</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a href="" class="dropdown-item"><i aria-hidden="true" class="fas fa-edit me-2"></i>Update User</a>
@@ -86,10 +86,10 @@
                     </li>
                     <li aria-hidden="true" class="nav-item">
                         <div class="dropend">
-                            <a href="#" class="w-25 dropdown-toggle nav-link" id="contract-nav" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="w-25 dropdown-toggle nav-link" id="database-nav" data-bs-toggle="dropdown" aria-expanded="false">
                               <i aria-hidden="true" class="fas fa-database me-2"></i>  Database
                             </a>
-                            <div class="dropdown-menu w-25" aria-labelledby="contract-nav">
+                            <div class="dropdown-menu w-25" aria-labelledby="database-nav">
                                 <a href="" class="dropdown-item"><i aria-hidden="true" class="fas fa-copy me-2"></i>Copy Database</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a href="" class="dropdown-item"><i aria-hidden="true" class="fas fa-edit me-2"></i>Update Database</a>
@@ -116,7 +116,7 @@
         <div class="col-lg-2 d-none d-lg-inline-block bg-dark">
             <ul class="nav nav-pills flex-column ms-1 lead" role="tablist">
                 <li aria-hidden="true" class="nav-item" role="presentation">
-                    <a href="#dashboard-pane" id="dashboard" data-bs-toggle="tab" role="tab" aria-controls="dashboard-pane" aria-selected="true" 
+                    <a href="#dashboard-pane" id="dashboard-lg-nav" data-bs-toggle="tab" role="tab" aria-controls="dashboard-pane" aria-selected="true" 
                     class="nav-link active"><i aria-hidden="true" class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 </li>
                 <li aria-hidden="true" class="nav-item dropend" role="presentation">
@@ -130,7 +130,8 @@
                         <a href="#update-product-pane" class="dropdown-item" id="update-product"
                         data-bs-toggle="tab" role="tab" aria-selected="false" aria-controls="update-product-pane"><i aria-hidden="true" class="fas fa-edit me-2"></i>Update Product</a>
                         <div class="dropdown-divider bg-light"></div>
-                        <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-minus me-2"></i>Remove Product</a>
+                        <a href="#remove-product-pane" class="dropdown-item" id="remove-product"
+                        data-bs-toggle="tab" role="tab" aria-selected="false" aria-controls="remove-product-pane"><i aria-hidden="true" class="fas fa-minus me-2"></i>Remove Product</a>
                     </div>
                 </li>
                 <li aria-hidden="true" class="nav-item dropend" role="presentation">
@@ -150,20 +151,20 @@
                     </div>
                 </li>
                 <li aria-hidden="true" class="nav-item dropend" role="presentation">
-                    <a class="nav-link dropdown-toggle w-100" id="product-lg-nav" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle w-100" id="purchase-lg-nav" data-bs-toggle="dropdown" aria-expanded="false">
                       <i aria-hidden="true" class="fas fa-shopping-cart me-2"></i>  Purchase
                     </a>
-                    <div class="dropdown-menu lead" aria-labelledby="product-lg-nav">
+                    <div class="dropdown-menu lead" aria-labelledby="purchase-lg-nav">
                         <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-shopping-cart me-2"></i>Buy</a>
                         <div class="dropdown-divider bg-light"></div>
                         <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-file-invoice me-2"></i>Invoice</a>
                     </div>
                 </li>
                 <li aria-hidden="true" class="nav-item dropend" role="presentation">
-                    <a class="nav-link dropdown-toggle w-100" id="product-lg-nav" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle w-100" id="user-lg-nav" data-bs-toggle="dropdown" aria-expanded="false">
                      <i aria-hidden="true" class="fas fa-users me-2"></i>   Users
                     </a>
-                    <div class="dropdown-menu lead" aria-labelledby="product-lg-nav">
+                    <div class="dropdown-menu lead" aria-labelledby="user-lg-nav">
                         <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-plus me-2"></i>Add User</a>
                         <div class="dropdown-divider bg-light"></div>
                         <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-edit me-2"></i>Update User</a>
@@ -172,10 +173,10 @@
                     </div>
                 </li>
                 <li aria-hidden="true" class="nav-item dropend" role="presentation">
-                    <a class="nav-link dropdown-toggle w-100" id="product-lg-nav" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle w-100" id="database-lg-nav" data-bs-toggle="dropdown" aria-expanded="false">
                       <i aria-hidden="true" class="fas fa-database me-2"></i>  Database
                     </a>
-                    <div class="dropdown-menu lead" aria-labelledby="product-lg-nav">
+                    <div class="dropdown-menu lead" aria-labelledby="database-lg-nav">
                         <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-copy me-2"></i>Copy Database</a>
                         <div class="dropdown-divider bg-light"></div>
                         <a href="#" class="dropdown-item"><i aria-hidden="true" class="fas fa-edit me-2"></i>Update Database</a>
@@ -193,6 +194,9 @@
                 </div>
                 <div id="update-product-pane" class="tab-pane" role="tabpanel" aria-labelledby="update-product">
                     <h1 class="text-dark lead text-center">Update Product</h1>
+                </div>
+                <div id="remove-product-pane" class="tab-pane" role="tabpanel" aria-labelledby="remove-product">
+                    <h1 class="text-dark lead text-center">Remove Product</h1>
                 </div>
             </div>
         </div>
